@@ -1,101 +1,105 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<style>
-		body {
-			background-color: black;
-			color: white;
-			text-align: center;
-			font-size: 48px;
-			user-select: none;
-		}
-		h1 {
-			display: inline;
-			line-height: 200px;
-			vertical-align: middle;
-		}
-		span{
-			padding: 20px;
-		}
-		button {
-                        border: none;
-                        outline: none;
-                        background-color: transparent;
-                        color: white;
-                        width: 100px;
-                        height: 100px;
-		}
-                button.life-increment {
-                  font-size: 48px;
-                }
-	</style>
-	<title>Counter</title>
-</head>
-<body>
-	<div style="transform: rotate(180deg)">
-		<button class="life-increment" id="p1m">-</button>
-		<h1 id="p1s"></h1>
-		<button class="life-increment" id="p1p">+</button>
-	</div>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        text-align: center;
+        font-size: 48px;
+        user-select: none;
+      }
+      h1 {
+        display: inline;
+        line-height: 200px;
+        vertical-align: middle;
+      }
+      span {
+        padding: 20px;
+      }
+      button {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: white;
+        width: 100px;
+        height: 100px;
+      }
+      button.life-increment {
+        font-size: 48px;
+      }
+      button {
+        touch-action: manipulation;
+      }
+    </style>
+    <title>Counter</title>
+  </head>
+  <body>
+    <div style="transform: rotate(180deg)">
+      <button class="life-increment" id="p1m">-</button>
+      <h1 id="p1s"></h1>
+      <button class="life-increment" id="p1p">+</button>
+    </div>
 
-	<div>
-		<button class="life-increment" id="p2m">-</button>
-		<h1 id="p2s"></h1>
-		<button class="life-increment" id="p2p">+</button>
-	</div>
+    <div>
+      <button class="life-increment" id="p2m">-</button>
+      <h1 id="p2s"></h1>
+      <button class="life-increment" id="p2p">+</button>
+    </div>
 
-	<button id="reset">Reset</button>
+    <button id="reset">Reset</button>
 
-	<script type="text/javascript">
-		function reset(){
-			var p1sElement = document.getElementById("p1s")
-			var p2sElement = document.getElementById("p2s")
-			p1sElement.innerText = 20
-			p2sElement.innerText = 20
-		}
+    <script type="text/javascript">
+      function reset() {
+        var p1sElement = document.getElementById('p1s')
+        var p2sElement = document.getElementById('p2s')
+        p1sElement.innerText = 20
+        p2sElement.innerText = 20
+      }
 
-		reset()
+      reset()
 
-		var p1m = document.getElementById("p1m")
-		p1m.onclick = function(){
-			var p1sElement = document.getElementById("p1s")
-			console.log("click")
-			var p1s = parseInt(p1sElement.innerText)
-			updated = p1s - 1
-			p1sElement.innerText = updated
-		}
+      var p1m = document.getElementById('p1m')
+      p1m.onclick = function () {
+        var p1sElement = document.getElementById('p1s')
+        console.log('click')
+        var p1s = parseInt(p1sElement.innerText)
+        updated = p1s - 1
+        p1sElement.innerText = updated
+      }
 
-		var p1p = document.getElementById("p1p")
-		p1p.onclick = function(){
-			var p1sElement = document.getElementById("p1s")
-			var p1s = parseInt(p1sElement.innerText)
-			updated = p1s + 1
-			p1sElement.innerText = updated
-		}
+      var p1p = document.getElementById('p1p')
+      p1p.onclick = function () {
+        var p1sElement = document.getElementById('p1s')
+        var p1s = parseInt(p1sElement.innerText)
+        updated = p1s + 1
+        p1sElement.innerText = updated
+      }
 
-		var p2m = document.getElementById("p2m")
-		p2m.onclick = function(){
-			var p2sElement = document.getElementById("p2s")
-			var p2s = parseInt(p2sElement.innerText)
-			updated = p2s - 1
-			p2sElement.innerText = updated
-		}
+      var p2m = document.getElementById('p2m')
+      p2m.onclick = function () {
+        var p2sElement = document.getElementById('p2s')
+        var p2s = parseInt(p2sElement.innerText)
+        updated = p2s - 1
+        p2sElement.innerText = updated
+      }
 
-		var p2p = document.getElementById("p2p")
-		p2p.onclick = function(){
-			var p2sElement = document.getElementById("p2s")
-			var p2s = parseInt(p2sElement.innerText)
-			updated = p2s + 1
-			p2sElement.innerText = updated
-		}
+      var p2p = document.getElementById('p2p')
+      p2p.onclick = function () {
+        var p2sElement = document.getElementById('p2s')
+        var p2s = parseInt(p2sElement.innerText)
+        updated = p2s + 1
+        p2sElement.innerText = updated
+      }
 
-		var resetButton = document.getElementById("reset")
-		resetButton.onclick = function(){
-			reset()
-		}
-
-
-	</script>
-</body>
+      var resetButton = document.getElementById('reset')
+      resetButton.onclick = function () {
+        reset()
+      }
+    </script>
+  </body>
 </html>
